@@ -1,5 +1,8 @@
 {
   "name": "stock-market-app",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

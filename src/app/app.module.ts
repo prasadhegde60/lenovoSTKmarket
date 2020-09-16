@@ -9,13 +9,26 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Network } from '@ionic-native/network/ngx';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { PayPal } from '@ionic-native/paypal/ngx';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { MatDialog, MatDialogModule } from '@angular/material';
+import { OverlayModule } from '@angular/cdk/overlay';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatDialogModule],
   providers: [
+    Network,
     StatusBar,
     SplashScreen,
+    InAppBrowser,
+    PayPal,
+    MatDialog,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

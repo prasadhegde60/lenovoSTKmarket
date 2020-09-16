@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseAPIKey: 'AIzaSyAnkundpZfts5uEBVQNJa6w-hMXcAwjPT0',
+  cloudFunctions : {
+    createOrder: 'https://us-central1-stock-market-9e74c.cloudfunctions.net/createOrder',
+    capturePayment: 'https://us-central1-stock-market-9e74c.cloudfunctions.net/capturePayments'
+  },
+  RAZORPAY_KEY_ID: 'rzp_test_5ur9TowArpAkil',
+  KEY_SECRET: 'qLkjoJkSN84iTzAFcG4w4dfE'
 };
 
 /*
